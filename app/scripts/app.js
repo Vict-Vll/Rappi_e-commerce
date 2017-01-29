@@ -15,21 +15,27 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+  .config(function ($stateProvider,$urlRouterProvider,$resourceProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider
+      .state('app', {
+        url: "",
+        templateUrl:'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        abstract:true
       })
-      .when('/about', {
+      .state('app.home', {
+        url: "/",
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
+      .state('app.about', {
+        url: "/about",
         templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
+        controller: 'AboutCtrl'
       });
+      $resourceProvider.defaults.stripTrailingSlashes = false;
   });
