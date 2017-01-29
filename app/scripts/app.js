@@ -15,8 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch',
-    'ui.router'
+    'ui.router',
+    'ngMaterial',
+    'pascalprecht.translate'
   ])
   .config(function ($stateProvider,$urlRouterProvider,$resourceProvider) {
     $urlRouterProvider.otherwise("/");
