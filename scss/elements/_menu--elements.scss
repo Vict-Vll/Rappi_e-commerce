@@ -1,0 +1,23 @@
+.menu-laptop--options {
+  li {
+    position: relative;
+    width: 100%;
+    span {
+      font-weight: bold;
+    }
+    &:hover {
+      i {
+        color: $lime;
+      }
+      span {
+        color: $white;
+      }
+    }
+  }
+}
+.menu-laptop--open {
+  margin-left: 350px;
+}
+.menu-mobile--logo {
+  height: 65px;
+}
