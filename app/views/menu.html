@@ -1,0 +1,25 @@
+<div class="row" ng-controller="MenuCtrl">
+  <div class="row cyan menu-laptop hide-on-med-and-down center-align">
+      <img src="images/Rappi.png" class="responsive-img col l12 m-top-50" alt="">
+      <ul class="col l12 menu-laptop--options m-top-80">
+        <a><li class="cyan-text text-darken-4 m-bottom-80"><i class="material-icons small">search</i><span class="block">{{'SEARCH' | translate}}</span></li></a>
+        <a><li class="cyan-text text-darken-4 m-bottom-80"><i class="material-icons small">store</i><span class="block">{{'PRODUCTS' | translate}}</span></li></a>
+        <a><li class="cyan-text text-darken-4"><i class="material-icons small">card_travel</i><span class="block">{{'SHOOPING_CART' | translate}}</span></li></a>
+      </ul>
+  </div>
+  <nav class="row cyan menu-mobile hide-on-large-only">
+    <div class="nav-wrapper">
+      <a href="#" data-activates="search" class="button-collapse left"><i class="material-icons small">search</i></a>
+      <a href="#" class="brand-logo center">
+        <img src="images/Rappi.png" class="menu-mobile--logo padd-10" alt="">
+      </a>
+      <ul id="search" class="side-nav padd-10">
+        <h5 class="cyan-text">{{'SEARCH' | translate}}</h5>
+      </ul>
+      <ul id="shopping_cart" class="side-nav padd-10">
+        <h5 class="cyan-text">{{'SHOOPING_CART' | translate}}</h5>
+      </ul>
+      <a href="#" data-activates="shopping_cart" class="button-collapse right"><i class="material-icons small">card_travel</i></a>
+    </div>
+  </nav>
+</div>

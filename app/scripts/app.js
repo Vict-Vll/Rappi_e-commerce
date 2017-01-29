@@ -16,7 +16,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ui.router',
-    'ngMaterial',
     'pascalprecht.translate'
   ])
   .config(function ($stateProvider,$urlRouterProvider,$resourceProvider) {
