@@ -1,5 +1,16 @@
 {
   "SEARCH":"Buscar",
   "PRODUCTS":"Productos",
-  "SHOOPING_CART":"Carrito"
+  "SHOOPING_CART":"Carrito",
+  "ORDER_BY":"Ordenar por",
+  "NAME":"Nombre",
+  "HIGHEST_PRICE":"Mayor precio",
+  "LOWEST_PRICE":"Menor precio",
+  "FILTER_BY":"Filtrar por",
+  "AVAILIBLE":"Disponible",
+  "UNAVAILIBLE":"Agotado",
+  "ADD_CART":"Añadir al carrito",
+  "YES":"Si",
+  "NO":"No",
+  "CATEGORIES":"Categorias"
 }

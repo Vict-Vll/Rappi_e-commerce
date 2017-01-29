@@ -1,10 +1,10 @@
-<div class="row" ng-controller="MenuCtrl">
+<div class="row m-bottom--20" ng-controller="MenuCtrl">
   <div class="row cyan menu-laptop hide-on-med-and-down center-align">
       <img src="images/Rappi.png" class="responsive-img col l12 m-top-50" alt="">
       <ul class="col l12 menu-laptop--options m-top-80">
         <a><li class="cyan-text text-darken-4 m-bottom-80"><i class="material-icons small">search</i><span class="block">{{'SEARCH' | translate}}</span></li></a>
-        <a><li class="cyan-text text-darken-4 m-bottom-80"><i class="material-icons small">store</i><span class="block">{{'PRODUCTS' | translate}}</span></li></a>
-        <a><li class="cyan-text text-darken-4"><i class="material-icons small">card_travel</i><span class="block">{{'SHOOPING_CART' | translate}}</span></li></a>
+        <a><li class="cyan-text text-darken-4 m-bottom-80" ui-sref="app.products" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">store</i><span class="block">{{'PRODUCTS' | translate}}</span></li></a>
+        <a><li class="cyan-text text-darken-4"><i class="material-icons small">shopping_cart</i><span class="block">{{'SHOOPING_CART' | translate}}</span></li></a>
       </ul>
   </div>
   <nav class="row cyan menu-mobile hide-on-large-only">
@@ -19,7 +19,7 @@
       <ul id="shopping_cart" class="side-nav padd-10">
         <h5 class="cyan-text">{{'SHOOPING_CART' | translate}}</h5>
       </ul>
-      <a href="#" data-activates="shopping_cart" class="button-collapse right"><i class="material-icons small">card_travel</i></a>
+      <a href="#" data-activates="shopping_cart" class="button-collapse right"><i class="material-icons small">shopping_cart</i></a>
     </div>
   </nav>
 </div>

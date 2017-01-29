@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name rappiApp
+ * @name Rappi
  * @description
- * # rappiApp
+ * # Rappi
  *
  * Main module of the application.
  */
 angular
-  .module('rappiApp', [
+  .module('Rappi', [
     'ngAnimate',
     'ngAria',
     'ngResource',
@@ -27,10 +27,10 @@ angular
         controller: 'MainCtrl',
         abstract:true
       })
-      .state('app.home', {
+      .state('app.products', {
         url: "/",
-        templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
+        templateUrl: 'views/products.html',
+        controller: 'ProductsCtrl'
       })
       .state('app.about', {
         url: "/about",
