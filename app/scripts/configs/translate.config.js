@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name rappiApp.config: TranslateProvider
+ * @name Rappi.config: TranslateProvider
  * @description
  * # Translate
- * Config of the rappiApp
+ * Config of the Rappi
  */
-angular.module('rappiApp')
+angular.module('Rappi')
   .config(['$translateProvider', function ($translateProvider) {
     // add translation tables
     $translateProvider.useStaticFilesLoader({

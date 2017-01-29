@@ -1,0 +1,16 @@
+.carousel-item {
+  background-position: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.carousel .indicators {
+  top: 0;
+  .indicator-item {
+    display: inline-block;
+    position: relative;
+    height: 10px;
+    width: 30%;
+    margin: 4px 4px;
+    border-radius: 0;
+  }
+}

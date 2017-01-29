@@ -15,9 +15,15 @@
     }
   }
 }
-.menu-laptop--open {
-  margin-left: 350px;
+.menu-laptop--options-active {
+  i {
+    color: $lime;
+  }
+  span {
+    color: $white;
+  }
 }
+
 .menu-mobile--logo {
   height: 65px;
 }

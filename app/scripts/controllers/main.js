@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name rappiApp.controller:MainCtrl
+ * @name Rappi.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the rappiApp
+ * Controller of the Rappi
  */
-angular.module('rappiApp')
+angular.module('Rappi')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name rappiApp.controller:MenuCtrl
+ * @name Rappi.controller:MenuCtrl
  * @description
  * # MenuCtrl
- * Controller of the rappiApp
+ * Controller of the Rappi
  */
-angular.module('rappiApp')
+angular.module('Rappi')
   .controller('MenuCtrl', function ($scope) {
     angular.element('.button-collapse.right').sideNav({
       menuWidth: '300px',

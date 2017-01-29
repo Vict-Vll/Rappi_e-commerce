@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col s12 carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-item" ng-repeat="product in products | filter : product.best_seller==true | limitTo : 3">
+      <img src="{{product.img}}" alt="">
+    </div>
+  </div>
+  <nav>
+    <div class="nav-wrapper">
+      <ul class="row col s12 lime darken-1">
+          <li class="left col s4 l2">
+            <select ng-model="order">
+              <option value="" disabled selected>{{'ORDER_BY' | translate}}</option>
+              <option value="name">{{'NAME' | translate}}</option>
+              <option value="!price">{{'HIGHEST_PRICE' | translate}}</option>
+              <option value="price">{{'LOWEST_PRICE' | translate}}</option>
+            </select>
+          </li>
+          <li class="right col s4 l2">
+            <select ng-model="filterBy">
+              <option value="" disabled selected>{{'FILTER_BY' | translate}}</option>
+              <option value="">{{'AVAILIBLE' | translate}}</option>
+              <option value="">{{'UNAVAILIBLE' | translate}}</option>
+              <option value="">Mas vendidos</option>
+              <option value="">Precio > 30.000</option>
+              <option value="">Precio < 10.000</option>
+              <option value="" disabled>{{'CATEGORIES' | translate}}</option>
+              <option ng-repeat="categorie in categories" value="{{categorie.categori_id}}">{{categorie.name}}</option>
+            </select>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="card col s6 m4 l3" ng-repeat="product in products | orderBy: order">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{product.img}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{product.name}}<i class="material-icons right">more_vert</i></span>
+      <h6>{{product.price}}</h6>
+      <span ng-show="{{product.available}}==true"><p class="lime-text text-darken-1">{{'AVAILIBLE' | translate}}</span></p></span>
+      <p class="red-text text-lighten-2" ng-show="{{product.available}}==false">{{'UNAVAILIBLE' | translate}}</p>
+    </div>
+    <div class="card-reveal row">
+      <span class="card-title grey-text text-darken-4">{{product.name}}<i class="material-icons right">close</i></span>
+      <p>{{product.description}}</p>
+      <h5 class="red-text text-lighten-2 center" ng-show="{{product.available}}==false">{{'UNAVAILIBLE' | translate}}</h5>
+      <a ng-show="{{product.available}}==true" class="waves-effect waves-light btn cyan col s12" href="#validation-add" ng-click="infoProduct(product)">{{'ADD_CART' | translate}}<i class="material-icons right">shopping_cart</i></a>
+    </div>
+  </div>
+</div>
+<div id="validation-add" class="modal">
+  <div class="modal-content cyan white-text">
+    <i ng-show="valid.best_seller==true" class="material-icons right">grade</i>
+    <h4>{{'ADD_CART' | translate}}?</h4>
+  </div>
+  <div class="card horizontal m-0">
+    <div class="card-image">
+        <img src="{{valid.img}}">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{valid.name}}<span class="right">{{valid.price}}</span></h5>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat">{{'NO' | translate}}</a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-lime lime btn-flat" ng-click="addCart(valid)">{{'YES' | translate}}</a>
+  </div>
+</div>
