@@ -1,0 +1,51 @@
+<div class="row grey lighten-4">
+  <div class="row col s12">
+    <div class="col s12">
+      <h2 class="cyan-text left">{{'SHOPPING_CART' | translate}}</h2>
+      <p class="col s12 hide-on-med-and-down">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <a class="red-text right m-right-50" name="button" data-target="validation-rm"><p>Vaciar carrito</p></a>
+    <div class="row col s12">
+      <div class="card horizontal col s12 l6 hoverable" ng-repeat="product in products">
+        <img src="{{product.img}}" class="col s3 resposice-img">
+        <div class="card-stacked">
+          <div class="card-content">
+            <h5 class="grey-text text-darken-3"><span class="left">{{product.name}}</span><span class="right">{{product.price}}</span></h5>
+          </div>
+          <div class="card-action">
+            <a ng-click="removeCart($index)" class="red-text right">Eliminar del carrito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row col s12 offset-l7 l5">
+    <div class="col s11 l10 offset-l1">
+      <h4>Factura</h4>
+      <ul class="collection with-header">
+        <li class="collection-item" ng-repeat="product in products"><div>{{product.name}}<span class="secondary-content">{{product.price}}</span></div></li>
+        <li class="collection-item"><div>Total<span class="secondary-content">{{total}}</span></div></li>
+      </ul>
+      <button class="btn cyan waves waves-effect right" type="button" ng-click="clearAll()" data-target="pay" ui-sref="app.home">Pagar</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="validation-rm" class="modal">
+  <div class="modal-content cyan white-text">
+    <h4>Vaciar el carrito?</h4>
+  </div>
+  <div class="card horizontal m-0">
+  </div>
+  <div class="modal-footer">
+    <a href="#!/cart" class=" modal-action modal-close waves-effect waves-red red lighten-3 btn-flat">{{'NO' | translate}}</a>
+    <a  class=" modal-action modal-close waves-effect waves-lime btn-flat" ng-click="clearAll()">{{'YES' | translate}}</a>
+  </div>
+</div>
+
+<div id="pay" class="modal lime">
+  <div class="modal-content white-text center">
+    <h4>Gracias por preferirnos!</h4>
+  </div>
+</div>

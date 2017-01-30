@@ -8,7 +8,7 @@
  * Controller of the Rappi
  */
 angular.module('Rappi')
-  .controller('MenuCtrl', function ($scope) {
+  .controller('MenuCtrl', function ($scope,localStorageService) {
     angular.element('.button-collapse.right').sideNav({
       menuWidth: '300px',
       edge: 'right',
