@@ -1,0 +1,30 @@
+<nav class="col s12 lime hide-on-large-only">
+  <div class="nav-wrapper">
+    <a class="white-text flex" ui-sref="app.products"><i class="material-icons small">keyboard_arrow_left</i>Volver</a>
+  </div>
+</nav>
+<div class="row col s12">
+  <div class="col s12">
+    <h2 class="cyan-text left">{{'SEARCH' | translate}}</h2>
+  </div>
+  <div class="m-bottom-50 col s10 offset-s1">
+    <input type="text" class="grey lighten-4" ng-model="test.name">
+  </div>
+  <div class="card col s12 l3 hoverable" ng-repeat="product in products | filter:test:strict">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{product.img}}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">{{product.name}}<i class="material-icons right">more_vert</i></span>
+      <h6>{{product.price | currency:"$":0}}</h6>
+      <span ng-show="{{product.available}}==true"><p class="lime-text text-darken-1">{{'AVAILIBLE' | translate}}</span></p></span>
+      <p class="red-text text-lighten-2" ng-show="{{product.available}}==false">{{'UNAVAILIBLE' | translate}}</p>
+    </div>
+    <div class="card-reveal row">
+      <span class="card-title grey-text text-darken-4">{{product.name}}<i class="material-icons right">close</i></span>
+      <p>{{product.description}}</p>
+      <h5 class="lime-text center" ng-show="{{product.available}}==true">{{'AVAILIBLE' | translate}}</h5>
+      <h5 class="red-text text-lighten-2 center" ng-show="{{product.available}}==false">{{'UNAVAILIBLE' | translate}}</h5>
+    </div>
+  </div>
+</div>

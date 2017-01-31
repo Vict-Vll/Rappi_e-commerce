@@ -2,20 +2,17 @@
   <div class="row cyan menu-laptop hide-on-med-and-down center-align">
       <img src="images/Rappi.png" class="responsive-img col l12 m-top-50" alt="">
       <ul class="col l12 menu-laptop--options m-top-80">
-        <a><li class="cyan-text text-darken-4 m-bottom-80"><i class="material-icons small">search</i><span class="block">{{'SEARCH' | translate}}</span></li></a>
+        <a><li class="cyan-text text-darken-4 m-bottom-80" ui-sref="app.search" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">search</i><span class="block">{{'SEARCH' | translate}}</span></li></a>
         <a><li class="cyan-text text-darken-4 m-bottom-80" ui-sref="app.products" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">store</i><span class="block">{{'PRODUCTS' | translate}}</span></li></a>
         <a><li class="cyan-text text-darken-4" ui-sref="app.cart" ui-sref-active="menu-laptop--options-active"><span>{{cartNo}}</span><i class="material-icons small">shopping_cart</i><span class="block">{{'SHOPPING_CART' | translate}}</span></li></a>
       </ul>
   </div>
   <nav class="row cyan menu-mobile hide-on-large-only">
     <div class="nav-wrapper">
-      <a href="#" data-activates="search" class="button-collapse left"><i class="material-icons small">search</i></a>
+      <a href="#" class="left m-left-10" ui-sref="app.search" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">search</i></a>
       <a href="#" class="brand-logo center">
         <img src="images/Rappi.png" class="menu-mobile--logo padd-10" alt="">
       </a>
-      <ul id="search" class="side-nav">
-        <h5 class="cyan-text">{{'SEARCH' | translate}}</h5>
-      </ul>
       <a class="right m-right-10 " ui-sref="app.cart" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">shopping_cart</i></a>
     </div>
   </nav>
