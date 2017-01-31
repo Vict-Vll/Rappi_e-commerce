@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ui.router',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'LocalStorageModule'
   ])
   .config(function ($stateProvider,$urlRouterProvider,$resourceProvider) {
     $urlRouterProvider.otherwise("/");
@@ -32,10 +33,10 @@ angular
         templateUrl: 'views/products.html',
         controller: 'ProductsCtrl'
       })
-      .state('app.about', {
-        url: "/about",
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .state('app.cart', {
+        url: "/cart",
+        templateUrl: 'views/cart.html',
+        controller: 'CartCtrl'
       });
       $resourceProvider.defaults.stripTrailingSlashes = false;
   });

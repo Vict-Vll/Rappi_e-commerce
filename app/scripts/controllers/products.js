@@ -8,16 +8,26 @@
  * Controller of the Rappi
  */
 angular.module('Rappi')
-  .controller('ProductsCtrl', function ($scope, $http) {
+  .controller('ProductsCtrl', function ($scope, $http,localStorageService) {
     $scope.shoppingCart=[];
+    if(localStorageService.isSupported) {
+      $scope.shoppingCart=JSON.parse(localStorage.getItem("cart"));
+      typeof($scope.products);
+    }
     $http({
       method : "GET",
       url : "scripts/js/data.json"
     }).then(function mySucces(response) {
       $scope.products = response.data.products;
+
+      $scope.products.forEach(function (element, index, array) {
+        var index = index;
+        $scope.price = element ;
+        $scope.price = $scope.price.price.replace(".", "");
+        $scope.price = parseFloat($scope.price);
+        $scope.products[index].price = $scope.price;
+      });
       $scope.categories = response.data.categories;
-      console.log($scope.products);
-      console.log($scope.categories);
     }, function myError(response) {
       $scope.error = response.statusText;
     });
@@ -37,5 +47,6 @@ angular.module('Rappi')
     }
     $scope.addCart = function(id) {
       $scope.shoppingCart.push(id);
+      localStorage.setItem("cart", JSON.stringify($scope.shoppingCart));
     }
   });
