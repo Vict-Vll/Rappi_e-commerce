@@ -20,7 +20,7 @@
             <h5 class="grey-text text-darken-3"><span class="left">{{product.name}}</span><span class="right">{{product.price | currency:"$":0}}</span></h5>
           </div>
           <div class="card-action">
-            <a ng-click="removeCart($index)" class="red-text right">{{'REMOVE_FROM_CART' | translate}}</a>
+            <a ng-click="removeCart($index)" onclick="Materialize.toast('Eliminado del carrito', 2000)" class="red-text right">{{'REMOVE_FROM_CART' | translate}}</a>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
   </div>
   <div class="modal-footer">
     <a href="#!/cart" class=" modal-action modal-close waves-effect waves-red red lighten-3 btn-flat">{{'NO' | translate}}</a>
-    <a  class=" modal-action modal-close waves-effect waves-lime btn-flat" ng-click="clearAll()">{{'YES' | translate}}</a>
+    <a  onclick="Materialize.toast('Carrito vacio', 2000)" class=" modal-action modal-close waves-effect waves-lime btn-flat" ng-click="clearAll()">{{'YES' | translate}}</a>
   </div>
 </div>
 
