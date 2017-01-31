@@ -12,5 +12,15 @@
   "ADD_CART":"Añadir al carrito",
   "YES":"Si",
   "NO":"No",
-  "CATEGORIES":"Categorias"
+  "CATEGORIES":"Categorias",
+  "BEST_SELLER": "Mejor vendido",
+  "OTHERS": "Otros",
+  "BACK": "Volver",
+  "SHOPPING_CART_DESCRIPTION": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "BACK": "Volver",
+  "EMPTY_CART": "Vaciar carrito",
+  "REMOVE_FROM_CART": "Eliminar del carrito",
+  "TOTAL": "Total",
+  "PAY": "Pagar",
+  "MESSAGE_PURCHASE": "Gracias por preferirnos!"
 }
