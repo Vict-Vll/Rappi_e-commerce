@@ -1,6 +1,6 @@
 <nav class="col s12 lime hide-on-large-only">
   <div class="nav-wrapper">
-    <a class="white-text flex" ui-sref="app.products"><i class="material-icons small">keyboard_arrow_left</i>Volver</a>
+    <a class="white-text flex" ui-sref="app.products"><i class="material-icons small">keyboard_arrow_left</i>{{'BACK' | translate}}</a>
   </div>
 </nav>
 <div class="row col s12">
@@ -8,9 +8,9 @@
     <h2 class="cyan-text left">{{'SEARCH' | translate}}</h2>
   </div>
   <div class="m-bottom-50 col s10 offset-s1">
-    <input type="text" class="grey lighten-4" ng-model="test.name">
+    <input type="text" class="grey lighten-4" ng-model="search.name">
   </div>
-  <div class="card col s12 l3 hoverable" ng-repeat="product in products | filter:test:strict">
+  <div class="card col s12 l3 hoverable" ng-repeat="product in products | filter:search:strict">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{product.img}}">
     </div>
