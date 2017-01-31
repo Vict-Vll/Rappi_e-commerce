@@ -16,10 +16,7 @@
       <ul id="search" class="side-nav">
         <h5 class="cyan-text">{{'SEARCH' | translate}}</h5>
       </ul>
-      <ul id="shopping_cart" class="side-nav">
-        <div ng-controller="CartCtrl" ng-include="'views/cart.html'"></div>
-      </ul>
-      <a href="#" data-activates="shopping_cart" class="button-collapse right" ng-click="refresh()"><i class="material-icons small">shopping_cart</i></a>
+      <a class="right m-right-10 " ui-sref="app.cart" ui-sref-active="menu-laptop--options-active"><i class="material-icons small">shopping_cart</i></a>
     </div>
   </nav>
 </div>

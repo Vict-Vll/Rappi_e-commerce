@@ -8,9 +8,15 @@
   .indicator-item {
     display: inline-block;
     position: relative;
-    height: 10px;
-    width: 30%;
-    margin: 4px 4px;
+    height: 5px;
+    width: 31%;
+    margin: 5px 4px;
     border-radius: 0;
+    background-color: #cddc39;
+    opacity: .5;
+  }
+  .active {
+    background-color: #cddc39 !important;
+    opacity: 1;
   }
 }

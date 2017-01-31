@@ -14,6 +14,14 @@ angular.module('Rappi')
     });
     $scope.products=JSON.parse(localStorage.getItem("cart"));
     typeof($scope.products);
+    $scope.products.forEach(function (element, index, array) {
+      var index = index;
+      $scope.price = element ;
+      $scope.price = $scope.price.price.replace(".", "");
+      $scope.price = parseFloat($scope.price);
+      $scope.total += $scope.price;
+      $scope.products[index].price = $scope.price;
+    });
     $scope.clearAll = function(n) {
       $scope.products = [] ;
       localStorage.setItem("cart", JSON.stringify($scope.products));
@@ -29,8 +37,4 @@ angular.module('Rappi')
       $scope.products=JSON.parse(localStorage.getItem("cart"));
       typeof($scope.products);
     }
-
-
-    $scope.total = 0;
-
   });

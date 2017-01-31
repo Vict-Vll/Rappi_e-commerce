@@ -6,3 +6,4 @@
 test/
 scss/.sass-cache
 app/styles/*
+npm-debug.log
