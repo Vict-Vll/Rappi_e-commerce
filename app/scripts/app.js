@@ -37,6 +37,11 @@ angular
         url: "/cart",
         templateUrl: 'views/cart.html',
         controller: 'CartCtrl'
+      })
+      .state('app.search', {
+        url: "/search",
+        templateUrl: 'views/search.html',
+        controller: 'SearchCtrl'
       });
       $resourceProvider.defaults.stripTrailingSlashes = false;
   });
