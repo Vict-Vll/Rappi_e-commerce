@@ -14,9 +14,14 @@ angular.module('Rappi')
     });
     $scope.products=JSON.parse(localStorage.getItem("cart"));
     typeof($scope.products);
+    $scope.total=0;
+    $scope.products.forEach(function (element, index, array) {
+      $scope.total+=element.price;
+    });
     $scope.clearAll = function(n) {
       $scope.products = [] ;
       localStorage.setItem("cart", JSON.stringify($scope.products));
+      $scope.total=0;
     }
     $scope.infoProduct = function(id) {
       $scope.valid=id;
